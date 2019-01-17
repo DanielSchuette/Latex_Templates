@@ -1,0 +1,178 @@
+% --- Preamble
+\documentclass[12pt]{beamer}            % 8 -- 12, 14, 17, 20pt
+\usetheme{AnnArbor}
+\usecolortheme{beaver}
+\usefonttheme{structuresmallcapsserif}
+% \useinnertheme{}
+% \useoutertheme{}
+
+% --- Packages
+\usepackage[normalem]{ulem}             % wrapping underline with UTF8
+\usepackage{soul}                       % \ul wraps around new line, no UTF8
+\usepackage{mathtools}                  % provides a nicer arrows in math mode
+\usepackage{chronology}                 % for simple timelines
+\usepackage{qtree}                      % for trees (easier syntax than TikZ)
+\usepackage{booktabs}                   % for professional tables
+\usepackage{fancybox}                   % fancy boxes!
+
+% --- Title Page Information
+\title[short title]{Example Presentation}
+\subtitle[short subtitle]{Subtitle}
+\author[abbreviated name]{Me}
+\institute[short name]{Long Institute Name}
+\date{\today}
+% \logo{\includegraphics[scale=0.1]{logo}}
+% \titlegraphic{\includegraphics[scale=0.1]{logo}}
+
+% --- Add toc to every new section
+\AtBeginSection[] {
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\begin{document}
+
+% --- Title Page
+\frame{\titlepage}
+
+% --- Table of Contents
+\frame{\frametitle{Outline}\tableofcontents[pausesections]}
+
+% --- Slide 1
+% include section/subsection for toc only!
+\section[short title]{Long Section Title}
+\subsection[short title]{Long Subsection Title}
+\begin{frame}                       % option "plain" for no decoration
+    \frametitle{First Slide}
+    \framesubtitle{This is a very simple slide.}
+    Whatever content the slide may have\ldots
+\end{frame}
+
+% --- Slide 2
+\section{Second Section}
+\begin{frame}
+    \frametitle{Second Slide}
+    Whatever content the slide may have\ldots
+\end{frame}
+
+% --- Slide 3
+\begin{frame}
+    \begin{description}
+        \item[Item 1] A description of Item 1.
+        \item[Item 2] A description of Item 2.
+    \end{description}
+\end{frame}
+
+% --- Slide 4
+\begin{frame}
+    \begin{itemize}
+        \item One item.
+        \item A second item.
+    \end{itemize}
+\end{frame}
+
+% --- Slide 5
+\begin{frame}
+    \frametitle{Demonstration of Enumerations.}
+    \begin{enumerate}
+        \item One item.
+            \pause
+        \item A second item.
+            \pause
+        \item A third item.
+            \pause
+        \item All items \ldots
+            \pause
+        \item \ldots are shown \ldots
+            \pause
+        \item \ldots sequentially.
+    \end{enumerate}
+\end{frame}
+
+% --- Slide 6
+\section{Demonstrating blocks.}
+\subsection{Simple blocks.}
+\begin{frame}
+    \frametitle{A simple block.}
+    \begin{block}{Block Title.}
+        All this text is within the block.
+    \end{block}
+\end{frame}
+
+% --- Slide 7
+\subsection{Alert blocks.}
+\begin{frame}
+    \frametitle{An alert block.}
+    \begin{alertblock}{Block Title.}
+        All this text is within the block.
+    \end{alertblock}
+\end{frame}
+
+% --- Slide 8
+\subsection{Example blocks.}
+\begin{frame}
+    \frametitle{An example block.}
+    \begin{exampleblock}{Block Title.}
+        Text within the block!
+    \end{exampleblock}
+\end{frame}
+
+% --- Slide 9
+\section{Columns}
+\begin{frame}
+    \frametitle{This Slide Demonstrates Columns.}
+
+    \begin{columns}
+        \begin{column}[]{.5\textwidth}
+            \begin{block}{First Title.}
+                Whatever the content of this FIRST block is. Wrapping is done in a smart way, though!
+            \end{block}
+        \end{column}
+
+        \begin{column}[]{.5\textwidth}
+            \begin{block}{Second Title.}
+                Whatever the content of this SECOND block is. Wrapping is done in a smart way, though!
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \begin{center}
+        The good-old ``center'' still works.
+    \end{center}
+\end{frame}
+
+% --- Slide 12
+\section{Table Demonstration}
+\begin{frame}
+    \frametitle{A simple, yet beautiful table.}
+    \begin{center}
+        \begin{tabular}{c|c|c}
+            \toprule
+            label 1 & label 2 & label 3 \\
+            \midrule
+            cell 1 & cell 2 & cell 3 \\
+            cell 4 & cell 5 & cell 6 \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+% --- Slide 11
+\section{Fancy Boxes.}
+\begin{frame}
+    \frametitle{Fancy, fancy.}
+    \shadowbox{Sample Text.}
+    \fbox{Sample Text.}
+    \doublebox{Sample Text.}
+    \ovalbox{Sample Text.}
+    \Ovalbox{Sample Text.}
+\end{frame}
+
+% --- Slide 12
+\begin{frame}
+    Fine.
+\end{frame}
+
+\end{document}
