@@ -1,2 +1,2 @@
-# \LaTeX Templates
-\LaTeX templates for articles and Beamer presentations.
+# $\LaTeX$ Templates
+$\LaTeX$ templates for articles and Beamer presentations.
